@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mystery Box Game</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <div style="text-align: center; margin-bottom: 20px;">
+    <h1>Mystery Box Guessing Game</h1>
+  
+  <div style="display: flex; max-width: 1200px; margin-left: auto; margin-right: auto; margin-bottom: 20px; border: 2px solid #666; border-radius: 8px; padding: 20px; color: #333; font-size: 14px; text-align: left;">
+    <div style="flex: 1; padding-right: 20px; border-right: 2px solid #666;">
+      <h2>Rules & Logic</h2>
+      <ul>
+        <li>There are 9 mystery boxes.</li>
+        <li>You have 5 trials to select boxes.</li>
+        <li>Each box may contain a prize, a trap, or be empty.</li>
+        <li>Finding a prize gives you 10 points.</li>
+        <li>Finding a trap adds to your losses.</li>
+        <li>Empty boxes give no points or losses.</li>
+        <li>Try to score 30 or more points to win the game.</li>
+        <li>The game ends after 5 trials, and the winner is announced.</li>
+        <li>You can click "Play Again" anytime to restart the game.</li>
+      </ul>
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+      <div class="boxes" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+        <div class="box" id="box1" onclick="chooseBox(1)">Box 1</div>
+        <div class="box" id="box2" onclick="chooseBox(2)">Box 2</div>
+        <div class="box" id="box3" onclick="chooseBox(3)">Box 3</div>
+        <div class="box" id="box4" onclick="chooseBox(4)">Box 4</div>
+        <div class="box" id="box5" onclick="chooseBox(5)">Box 5</div>
+        <div class="box" id="box6" onclick="chooseBox(6)">Box 6</div>
+        <div class="box" id="box7" onclick="chooseBox(7)">Box 7</div>
+        <div class="box" id="box8" onclick="chooseBox(8)">Box 8</div>
+        <div class="box" id="box9" onclick="chooseBox(9)">Box 9</div>
+      </div>
+    </div>
+  </div>
+  <div id="result" class="result"></div>
+  <div class="scoreboard" style="font-size: 14px; margin-bottom: 20px;">
+    Points: <span id="points">0</span> |
+    Trials: <span id="trials">0</span>/5
+  </div>
+
+  <button class="reset" onclick="resetGame()" style="padding: 8px 16px; font-size: 14px; cursor: pointer;">Play Again</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
